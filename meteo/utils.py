@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timezone
 from .models import Current_weather, Location, Update_tracker, Forecast
 
-api_key = "4d71bcac975ee8a26882512838625119"
+api_key = "**********************************"
 
 
 def update_hp():
