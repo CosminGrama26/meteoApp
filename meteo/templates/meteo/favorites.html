@@ -1,0 +1,33 @@
+{% extends "meteo/layout.html" %}
+{% load static %}
+{% load meteo_extras %}
+
+{% block title %}
+    Favorite Locations
+{% endblock %}
+
+{% block body %}
+    <div class="col-md-8 col-sm-12 mx-auto">
+        {% for location in locations %}
+        <div class="row align-items-center favorites">
+            <span class="col-3" id="location-name">{{ location.0.name }}</span>
+            <span class="col-2"><img src="{% static 'meteo/weather_icons/'|add:location.1.icon_id|add:'.png' %}" alt="{{location.1.main}}" class="img-fluid"></span>
+            <span class="col-2">{{ location.1.temperature | round_int }}°C</span>
+            <span class="col-3">{{ location.1.wind_speed | ms_to_kmh}} km/h {{ location.1.wind_direction | deg_to_card }} </span>
+            {% if location.1.rain %}
+            <div class="col-1 rainfall">
+                <img src="{% static 'meteo/weather_icons/10d.png' %}" alt="rain">
+                <span class="col-1">{{ location.1.rain }} mm</span>
+            </div>
+            {% endif %}
+            {% if location.1.snow %}
+            <div class="col-2 rainfall">
+                <img src="{% static 'meteo/weather_icons/13d.png' %}" alt="snow">
+                <span class="col-1">{{ location.1.snow }} cm</span>
+            </div>
+            {% endif %}
+        </div>
+        
+        {% endfor %}
+    </div>
+{% endblock %}

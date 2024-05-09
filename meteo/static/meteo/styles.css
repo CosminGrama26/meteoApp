@@ -1,0 +1,201 @@
+.container {
+    justify-content: center;
+}
+
+#title{
+    font-weight: 750;
+    text-align: center;
+    color: rgb(36, 75, 64);
+}
+
+nav {
+    padding: 3px;
+}
+
+#italy-map {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#italy-map-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.regional-capital {
+    position: absolute;
+    width: 6.5%;
+    height: 0;
+    padding-bottom: 6.5%;
+    background-color: rgba(255, 255, 255, 0.342);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.temperature {
+    position: absolute;
+    top: 75%;
+
+    font-size: calc(12px + 0.5vw);
+    color: white;
+    text-shadow: 
+        -2px -2px 2px #000,  
+        2px -2px 2px #000,
+        -2px 2px 2px #000,
+        2px 2px 2px #000;
+    }
+
+.location {
+    position: absolute;
+    bottom: 85%;
+    text-align: center;
+    
+    font-size: calc(8px + 0.5vw);
+    color: white;
+    text-shadow: 
+        -2px -2px 2px #000,  
+        2px -2px 2px #000,
+        -2px 2px 2px #000,
+        2px 2px 2px #000;
+}
+
+#Roma {top: 47%; left: 46%;}
+#Trieste {top: 13%; left: 54%;}
+#Trento {top: 10%; left: 34%;}
+#Firenze {top: 32%; left: 35%;}
+#Torino {top: 21%; left: 6%;}
+#Milano {top: 16%; left: 22%;}
+#Venezia {top: 15%; left: 44%;}
+#Aosta {top: 12%; left: 4%;}
+#Bologna {top: 24%; left: 38%;}
+#Aquila {top: 43%; left: 54%;}
+#Ancona {top: 32%; left: 53%;}
+#Napoli {top: 56%; left: 60%;}
+#Cagliari {top: 68%; left: 18%;}
+#Palermo {top: 79%; left: 52%;}
+#Potenza {top: 58%; left: 74%;}
+#Genova {top: 24%; left: 16%;}
+#Bari {top: 55%; left: 83%;}
+#Catanzaro {top: 72%; left: 77%;}
+#Campobasso {top: 48%; left: 64%;}
+#Perugia {top: 37%; left: 44%;}
+
+
+#location-title {
+    font-size: 18pt;
+    text-align: center;
+    font-weight: 750;
+}
+
+span {
+    text-align: center;
+}
+
+#location-page > *, .favorites {
+    font-size: 10pt;
+}
+
+.rainfall {
+    display: flex;
+}
+
+.rainfall > img {
+    height: calc(25px + 1vw);
+    width: calc(25px + 1vw);
+    position: relative;
+}
+
+#forecast-headers > span {
+    font-weight: 750;
+}
+
+#forecast-title{
+    text-align: center;
+    font-stretch: expanded;
+    font-size: 16pt;
+    margin-bottom: 7px;
+}
+
+.forecast, .favorites {
+    border-bottom: 2pt;
+    border-top: 0;
+    border-left: 1px;
+    border-right: 0;
+    border-color: rgba(127, 255, 212, 0.788);
+    border-style: solid;
+    background-color: rgba(223, 253, 243, 0.26);
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 10px;
+}
+
+#favorite-button{
+    margin-bottom: 7px;
+}
+
+.btn-primary {
+    background-color: rgba(127, 255, 212, 0.61);
+    color: black;
+    border-bottom: 1pt;
+    border-top: 0;
+    border-left: 0.5pt;
+    border-right: 0;
+    border-color: rgba(44, 90, 75, 0.788);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: rgb(86, 197, 160);
+    color: black;
+    border-bottom: 1pt;
+    border-top: 0;
+    border-left: 0.5pt;
+    border-right: 0;
+    border-color: rgba(44, 90, 75, 0.788);
+    border-style: solid;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.btn-primary:hover:active, .btn-primary:focus:active {
+    background-color: rgba(127, 255, 212, 0.61);
+    color: black;
+    border-bottom: 1pt;
+    border-top: 0;
+    border-left: 0.5pt;
+    border-right: 0;
+    border-color: rgba(44, 90, 75, 0.788);
+    border-style: solid;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.btn-secondary {
+    background-color: rgba(128, 128, 128, 0.616);
+    border-radius: 10px;
+    border-bottom: 1pt;
+    border-top: 0;
+    border-left: 0.5pt;
+    border-right: 0;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.712);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.favorites > #location-name {
+    font-weight: 650;
+    font-size: 11pt;
+}

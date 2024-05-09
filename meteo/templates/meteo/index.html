@@ -1,0 +1,32 @@
+{% extends "meteo/layout.html" %}
+{% load static %}
+{% load meteo_extras %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block body %}
+    <div class="col-md-8 col-sm-12 mx-auto">
+        <div id="italy-map">
+            <img src="{% static 'meteo/mappa_italia_cut.png' %}" alt="map of Italy" usemap="italy" id="italy-map-image">
+                {% for weather in weathers %}
+                    <div class="regional-capital" id="{{ weather.location }}">
+                        
+                        <div class="temperature">
+                            {{ weather.temperature | round_int }}°C
+                        </div>
+                        <div class="icon">
+                            <a href="{% url 'location' weather.location %}">
+                                <img src="{% static 'meteo/weather_icons/'|add:weather.icon_id|add:'.png' %}" alt="{{weather.main}}" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="location">
+                            {{ weather.location }}
+                        </div>            
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
